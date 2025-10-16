@@ -50,3 +50,10 @@
     - Qualité des mélodies générées
 
 ---
+
+### Ressources
+
+- https://api.arcade.academy/
+    - Alternative à Pygame
+
+---
