@@ -69,5 +69,6 @@
 
 - 16/10/2025 : Brainstorming idées, initialisation de github pour toute l'équipe
 - 06/11/2025 : Répartitions des rôles et idées principales du projet, préparation des sprites, mise en commun des règles du jeu
+- 12/11/2025 : Avancement individuel dans le projet suite aux répartitions des différentes tâches
 
 ---
