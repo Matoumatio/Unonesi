@@ -1,3 +1,5 @@
+import random
+
 def Carte():
     class cartes:
         def __init__(self, couleur, valeur):
