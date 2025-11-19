@@ -73,8 +73,9 @@
     - Mathis : Recherche sur la bibliothèque Pygame, brouillon de l'interface et recherche des assets
 ![Brouillon de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon1.png)
 - 19/11/2025
-    - Mathis : Recherches sur Aseprite (https://www.aseprite.org/) et Arcade (https://api.arcade.academy/) pour la création des sprites et l'interface graphique
+    - Mathis : Recherches sur Aseprite (https://www.aseprite.org/) et Arcade (https://api.arcade.academy/) pour la création des sprites et l'interface graphique, création de brouillons plus détaillés de l'interface de jeu et du menu de pause
 ![Brouillon détaillé de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon2.png)
 ![Brouillon détaillé du menu de pause](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon3.png)
+![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon4.png)
 
 ---
