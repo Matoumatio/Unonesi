@@ -71,7 +71,8 @@
 - 06/11/2025 : Répartitions des rôles et idées principales du projet, préparation des sprites, mise en commun des règles du jeu
 - 12/11/2025 : Avancement individuel dans le projet suite aux répartitions des différentes tâches, Mathis sur l'interface, Nathan sur le système de multijoueur, Shirley sur la gestion des différentes cartes dans le jeu et Tom sur le fonctionnement du jeu et l'implémentation des règles du jeu 
     - Mathis : Recherche sur la bibliothèque Pygame, brouillon de l'interface et recherche des assets
-
 ![Brouillon de l'interface](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon1.png)
+- 19/11/2025
+    - Mathis : Recherches sur Aseprite (https://www.aseprite.org/) et Arcade (https://api.arcade.academy/) pour la création des sprites et l'interface graphique
 
 ---
