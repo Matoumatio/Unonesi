@@ -1,13 +1,11 @@
 import random
-
-
-class Cartes:
-    def __init__(self, couleur, valeur):
+class cartes:
+        def __init__(self, couleur, valeur):
            self.couleur = couleur   # 'rouge', 'jaune', 'vert', 'bleu' ou 'noir' (joker)
            self.valeur = valeur     # 0-9, 'inverse', 'passe', '+2', 'joker', '+4'
 
-    def __repr__(self):
-        return f"{self.couleur} {self.valeur}"
+        def __repr__(self):
+          return f"{self.couleur} {self.valeur}"
 
 class JeuDeCartes:
     def __init__(self):
@@ -21,14 +19,14 @@ class JeuDeCartes:
         # Cartes de couleur
         for couleur in couleurs:
             for valeur in valeurs:
-                jeu.append(Cartes(couleur, valeur))
+                jeu.append(Carte(couleur, valeur))
                 if valeur != 0:
-                    jeu.append(Cartes(couleur, valeur))  # deux exemplaires sauf 0
+                    jeu.append(Carte(couleur, valeur))  # deux exemplaires sauf 0
 
         # Jokers
         for _ in range(4):
-            jeu.append(Cartes('noir', 'joker'))
-            jeu.append(Cartes('noir', '+4'))
+            jeu.append(Carte('noir', 'joker'))
+            jeu.append(Carte('noir', '+4'))
 
         random.shuffle(jeu)
         return jeu
