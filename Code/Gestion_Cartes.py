@@ -1,8 +1,8 @@
 import random
 
-def Carte():
-    class cartes:
-        def __init__(self, couleur, valeur):
+
+class cartes:
+    def __init__(self, couleur, valeur):
            self.couleur = couleur   # 'rouge', 'jaune', 'vert', 'bleu' ou 'noir' (joker)
            self.valeur = valeur     # 0-9, 'inverse', 'passe', '+2', 'joker', '+4'
 
