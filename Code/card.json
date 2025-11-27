@@ -1,0 +1,27 @@
+[
+    {
+    "card" : [
+        {
+            "card_001" : {
+                "card.type" : "basic",
+                "card.color" : "r",
+                "card.value" : "1",
+                "card.sprite" : "Assets/Cards/R1.png"
+            }
+        },
+        {
+            "card_002" : {
+                "card.type" : "basic",
+                "card.color" : "r",
+                "card.value" : "2"
+            }
+        },
+        {
+            "card.special_001" : {
+                "card.type" : "joker",
+                "card.color" : "none"
+            }
+        }
+    ]
+    }
+]
