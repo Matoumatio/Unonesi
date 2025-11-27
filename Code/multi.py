@@ -75,10 +75,13 @@ class Game:
             
 
     def tour_suivant(self):
-        self.joueur_actuel + 1
+        if self.joueur_actuel == 3:
+            self.joueur_actuel = 0
+        else:
+            self.joueur_actuel + 1
 
     def inverser_sens(self):
-        self.liste_joueurs
+        self.sens_du_jeu
 
     def sauter_joueur(self):
         self.joueur_actuel + 1

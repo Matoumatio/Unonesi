@@ -82,4 +82,8 @@
 -27/11/2025
     - Tom : Correction de bug sur les classes et essaie du code déjà en place avec des asserts
 
+    - Nathan : Essaie d'import les classes cartes dans le fichier multi
+
+    - Nathan : Avancement des methodes de la class Game
+
 ---
