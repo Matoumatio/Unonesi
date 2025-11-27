@@ -72,10 +72,14 @@
 - 12/11/2025 : Avancement individuel dans le projet suite aux répartitions des différentes tâches, Mathis sur l'interface, Nathan sur le système de multijoueur, Shirley sur la gestion des différentes cartes dans le jeu et Tom sur le fonctionnement du jeu et l'implémentation des règles du jeu 
     - Mathis : Recherche sur la bibliothèque Pygame, brouillon de l'interface et recherche des assets
 ![Brouillon de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon1.png)
+    - Tom : Recherche sur les différentes classes à implémenter pour les mécaniques du jeu : class Carte et MoteurJeu 
 - 19/11/2025
     - Mathis : Recherches sur Aseprite (https://www.aseprite.org/) et Arcade (https://api.arcade.academy/) pour la création des sprites et l'interface graphique, création de brouillons plus détaillés de l'interface de jeu et du menu de pause
 ![Brouillon détaillé de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon2.png)
 ![Brouillon détaillé du menu de pause](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon3.png)
 ![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon4.png)
+    - Tom : Avancement sur les mêmes classes 
+-27/11/2025
+    - Tom : Correction de bug sur les classes et essaie du code déjà en place avec des asserts
 
 ---
