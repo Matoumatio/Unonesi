@@ -12,6 +12,10 @@
         "files.save.1" : [
         {
             "game.mode" : "standard",
+
+            "game.discard_pile" : ["card_000"],
+            "game.isPlayable" : ["1, 8"],
+
             "player.number" : 2,
             "player.1" : [
                 {
