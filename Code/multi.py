@@ -1,8 +1,9 @@
 # Coder toutes les classes\methodes liées au multijoueurs
-from Gestion_Cartes import *
+import Gestion_Cartes.py as Gestion_Cartes
+from Gestion_Cartes import Carte, JeuDeCartes
 
 import random
-
+"""
 class Carte:
     def __init__(self, couleur, valeur):
         self.couleur = couleur   # 'rouge', 'jaune', 'vert', 'bleu' ou 'noir' (joker)
@@ -10,8 +11,8 @@ class Carte:
 
     def __repr__(self):
         return f"{self.couleur} {self.valeur}"
-
-
+"""
+"""
 class JeuDeCartes:
     def __init__(self):
         self.cartes = self.creer_jeu()
@@ -30,7 +31,7 @@ class JeuDeCartes:
 
         # Jokers
         for _ in range(4):
-            jeu.append(Carte('noir', 'joker'))
+            jeu.append(Gestion_Cartes(Carte('noir', 'joker')))
             jeu.append(Carte('noir', '+4'))
 
         random.shuffle(jeu)
@@ -41,7 +42,7 @@ class JeuDeCartes:
         self.cartes = self.cartes[n:]
         return cartes_piochees
 
-
+"""
 class Joueur:
     def __init__(self, nom):
         self.nom = nom
@@ -66,7 +67,10 @@ class Game:
     def commencer_partie(self, paquet):
         for joueurs in self.liste_joueurs:
             carte_piochees = paquet.piocher(7)
-            joueurs.cartes.append(carte_piochees)
+            for carte in carte_piochees:
+                joueurs.piocher_carte(carte)
+
+
         
             
 
@@ -82,5 +86,4 @@ class Game:
     def obtenir_joueur_actuel(self):
         joueur_actuel = self.joueur_actuel
         return joueur_actuel
-
 
