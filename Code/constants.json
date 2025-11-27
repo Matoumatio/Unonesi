@@ -1,9 +1,31 @@
 [
-    "settings" : [
+    {
+        "settings" : [
         {
-        "window.size" : [800, 600],
-        "files.saveLocation" : 
-        "files.autoSaveDelay": 1000
+            "window.size" : [800, 600],
+            "ingame" : false,
+            "fullscreen" : false,
+            "volume" : 75
         }
-    ]
+        ],
+
+        "files.save.1" : [
+        {
+            "game.mode" : "standard",
+            "player.number" : 2,
+            "player.1" : [
+                {
+                    "name" : "Alice",
+                    "deck" : ["card_001", "card_002", "card_003"]
+                }
+            ],
+            "player.2" : [
+                {
+                    "name" : "Bob",
+                    "deck" : ["card_004", "card_005", "card_006"]
+                }
+            ]
+        }
+        ]
+    }
 ]

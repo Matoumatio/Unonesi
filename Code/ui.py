@@ -3,7 +3,6 @@
 
 import arcade
 from arcade import Sprite, SpriteList
-from typing import List, Tuple
+from typing import List, Tup
 
 import constants.json as constants
-
