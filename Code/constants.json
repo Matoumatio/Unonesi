@@ -1,0 +1,9 @@
+[
+    "settings" : [
+        {
+        "window.size" : [800, 600],
+        "files.saveLocation" : 
+        "files.autoSaveDelay": 1000
+        }
+    ]
+]
