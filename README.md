@@ -83,7 +83,7 @@
     - Tom : Correction de bug sur les classes et essaie du code déjà en place avec des asserts
     - Nathan : Essaie d'import les classes cartes dans le fichier multi. Avancement des methodes de la class Game
     - Mathis : Ajout de constants.json pour syncroniser les valeurs (sauvegardes, paramètres, ...) entre les fichiers
-    - Shirley : Travail sur card.json pour definir les differentes cartes disponibles
-![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon5.png)
+    ![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon5.png)
+    - Shirley : Travail sur card.json pour definir les différentes cartes disponibles
 
 ---
