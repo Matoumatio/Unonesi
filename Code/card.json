@@ -292,15 +292,15 @@
         {
             "card.special_001" : {
                 "card.type" : "joker",
-                "card.color" : "none"
-                "card.sprite" : "Assets/Cards/Joker.png"
+                "card.color" : "none",
+                "card.sprite" : "Assets/Cards/JOKER.png"
             }
         },
         {
             "card.special" : {
                 "card.type" : "inverse",
-                "card.color" : "multi"
-                "card.sprite" : "Assets/Cards/inverse.png"
+                "card.color" : "multi",
+                "card.sprite" : "Assets/Cards/INVERSE.png"
             }
         }
     ]
