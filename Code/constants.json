@@ -3,9 +3,13 @@
         "settings" : [
         {
             "window.size" : [800, 600],
-            "ingame" : false,
-            "fullscreen" : false,
-            "volume" : 75
+
+            "game.ingame" : false,
+            "game.fullscreen" : false,
+            "game.volume" : 75,
+
+            "card.number_initial" : 7,
+            "card.deck_size" : 108
         }
         ],
 
@@ -13,7 +17,8 @@
         {
             "game.mode" : "standard",
 
-            "game.discard_pile" : ["card_000"],
+            "game.discard_pile" : ["card_010"],
+            "game.canPlay" : true,
             "game.isPlayable" : ["1, 8"],
 
             "player.number" : 2,
