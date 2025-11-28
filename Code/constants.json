@@ -7,6 +7,7 @@
             "game.ingame" : false,
             "game.fullscreen" : false,
             "game.volume" : 75,
+            "game.speed" : 1.0,
 
             "card.number_initial" : 7,
             "card.deck_size" : 108
@@ -17,9 +18,9 @@
         {
             "game.mode" : "standard",
 
-            "game.discard_pile" : ["card_010"],
+            "game.discardPile" : ["card_010"],
             "game.canPlay" : true,
-            "game.isPlayable" : ["1, 8"],
+            "game.isPlayable" : ["1, 2"],
 
             "player.number" : 2,
             "player.1" : [
