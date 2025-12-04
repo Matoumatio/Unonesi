@@ -184,7 +184,7 @@ class MoteurJeu:
         return self.joueur_actuel_index
     
     # ========================================================================
-    # RÈGLE DE LA PIOCHE : Quand et comment piocher ?
+    #  RÈGLE DE LA PIOCHE : Quand et comment piocher ?
     # ========================================================================
     
     def peut_rejouer_carte_piochee(self, carte_piochee, est_sanction):
