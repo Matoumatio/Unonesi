@@ -315,9 +315,8 @@ class MoteurJeu:
         return points
 
 
-# ========================================================================
+
 # TESTS / EXEMPLES D'UTILISATION
-# ========================================================================
 """
 if __name__ == "__main__":
     # Simulation pour tester les mécaniques
