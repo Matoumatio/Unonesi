@@ -80,10 +80,11 @@
 ![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon4.png)
     - Tom : Avancement sur les mêmes classes 
 - 27/11/2025
-    - Tom : Correction de bug sur les classes et essaie du code déjà en place avec des asserts
+    - Tom : Correction de bug sur les classes et sur l'ensemble du code et essaie du code déjà en place avec des asserts
     - Nathan : Essaie d'import les classes cartes dans le fichier multi. Avancement des methodes de la class Game
     - Mathis : Ajout de constants.json pour syncroniser les valeurs (sauvegardes, paramètres, ...) entre les fichiers
     ![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon5.png)
     - Shirley : Travail sur card.json pour definir les différentes cartes disponibles
-
+- 04/122025
+    -Tom 
 ---
