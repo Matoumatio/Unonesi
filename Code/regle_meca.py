@@ -28,19 +28,7 @@ class MoteurJeu:
     # ========================================================================
     
     def carte_est_jouable(self, carte_a_jouer):
-        """
-        RÈGLE FONDAMENTALE DU UNO :
-        Une carte peut être posée SI :
-        - Même couleur que la couleur actuelle (7 jaune sur n'importe quel jaune)
-        - OU même valeur que la carte visible (7 jaune sur 7 rouge)
-        - OU c'est un Joker ou +4
-        
-        Exemples :
-        - 7 jaune sur 7 rouge : OUI (même valeur)
-        - carte jaune sur 7 jaune : OUI (même couleur)
-        - 5 rouge sur 7 jaune : NON
-        - Joker sur n'importe quoi : OUI
-        """
+
         # Les jokers peuvent TOUJOURS être joués peut importe la carte d'avant
         if carte_a_jouer.valeur in ['joker', '+4']:
             return True
@@ -57,15 +45,7 @@ class MoteurJeu:
         return False
     
     def carte_plus4_est_legale(self, main_joueur):
-        """
-        RÈGLE SPÉCIALE DU +4 :
-        Le +4 ne peut être joué QUE si le joueur n'a AUCUNE carte
-        de la couleur demandée
         
-        Exemple : Si couleur actuelle = jaune
-        - Le joueur a un 5 rouge et un +4 : +4 est LÉGAL
-        - Le joueur a un 5 jaune et un +4 : +4 est ILLÉGAL (il doit jouer le jaune)
-        """
         for carte in main_joueur:
             if carte.couleur == self.couleur_actuelle:
                 return False  # Il a une carte de la bonne couleur = triche !
@@ -76,14 +56,7 @@ class MoteurJeu:
     # ========================================================================
     
     def jouer_carte(self, carte_jouee, main_joueur, couleur_choisie=None):
-        """
-        Joue une carte si c'est autorisé
         
-        Étapes :
-        1. Vérifie si la carte est jouable
-        2. Met à jour la carte visible et la couleur actuelle
-        3. Retourne True si succès, False si interdit
-        """
         # Vérifier si la carte est autorisée a etre posé
         if not self.carte_est_jouable(carte_jouee):
             return False, "Carte non compatible !"
@@ -102,17 +75,7 @@ class MoteurJeu:
         return True, "Carte jouée !"
     
     def appliquer_effet_carte(self, carte_jouee, nombre_joueurs):
-        """
-        Applique les effets des cartes spéciales
         
-        Retourne un dictionnaire avec les actions à effectuer :
-        {
-            'piocher': nombre de cartes à piocher (0 si rien),
-            'qui_pioche': 'joueur_suivant' ou None,
-            'sauter_tour': True/False,
-            'peut_rejouer_apres_pioche': True/False
-        }
-        """
         effet = {
             'piocher': 0,
             'qui_pioche': None,
@@ -155,11 +118,7 @@ class MoteurJeu:
     # ========================================================================
     
     def joueur_suivant(self, nombre_joueurs):
-        """
-        Calcule qui est le joueur suivant selon le sens du jeu
         
-        Sens horaire ou Sens anti-horaire 
-        """
         if self.sens_horaire:
             self.joueur_actuel_index = (self.joueur_actuel_index + 1) % nombre_joueurs
         else:
@@ -168,9 +127,7 @@ class MoteurJeu:
         return self.joueur_actuel_index
     
     def sauter_joueur(self, nombre_joueurs):
-        """
-        Saute le joueur suivant (pour les cartes Passe, +2, +4)
-        """
+        
         # On avance deux fois
         self.joueur_suivant(nombre_joueurs)
         self.joueur_suivant(nombre_joueurs)
@@ -181,16 +138,7 @@ class MoteurJeu:
     # ========================================================================
     
     def peut_rejouer_carte_piochee(self, carte_piochee, est_sanction):
-        """
-        RÈGLE IMPORTANTE :
         
-        - Si pioche VOLONTAIRE (le joueur ne peut pas jouer) :
-          → Si la carte piochée est jouable : il PEUT la jouer immédiatement
-          → Sinon : il passe son tour
-        
-        - Si pioche de SANCTION (+2, +4) :
-          → Le joueur pioche et PASSE son tour (pas le droit de rejouer après avoir piocher)
-        """
         # Si c'est une sanction : JAMAIS de rejeu
         if est_sanction:
             return False
@@ -203,18 +151,7 @@ class MoteurJeu:
     # ========================================================================
     
     def gerer_premiere_carte(self, premiere_carte, nombre_joueurs, donneur_index):
-        """
-        RÈGLES SPÉCIALES SELON LA PREMIÈRE CARTE RETOURNÉE :
         
-        - +2 : Premier joueur pioche 2 et passe son tour
-        - Inverse : Le donneur joue en premier, puis sens inversé
-        - Passe : Premier joueur est sauté
-        - Joker : Premier joueur choisit la couleur
-        - +4 : ON REMET DANS LA PIOCHE et on retourne une autre carte
-        - Autre : Partie normale
-        
-        Retourne : (premier_joueur_index, action_speciale)
-        """
         self.carte_visible = premiere_carte
         
         # CAS +4 : Carte interdite au début
@@ -258,15 +195,7 @@ class MoteurJeu:
     # ========================================================================
     
     def verifier_uno(self, joueur_cartes_restantes, a_dit_uno):
-        """
-        RÈGLE UNO :
-        - Quand un joueur pose son avant-dernière carte (il lui reste 1 carte),
-          il DOIT dire "UNO"
-        - Si il oublie et qu'un autre joueur le remarque :
-          → Il pioche 2 cartes de pénalité
         
-        Retourne : nombre de cartes à piocher en pénalité (0 ou 2)
-        """
         if joueur_cartes_restantes == 1 and not a_dit_uno:
             return 2  # Pénalité : 2 cartes
         return 0  # Pas de pénalité
@@ -276,21 +205,11 @@ class MoteurJeu:
     # ========================================================================
     
     def partie_terminee(self, joueur_cartes_restantes):
-        """
-        La partie se termine quand un joueur n'a plus de cartes
-        """
+       
         return joueur_cartes_restantes == 0
     
     def calculer_points(self, main_adversaire):
-        """
-        RÈGLE COMPTAGE DES POINTS :
-        - Cartes 0-9 : valeur du chiffre
-        - +2, Inverse et Passe : 20 points
-        - Jokeret +4 : 50 points
         
-        Le gagnant marque la somme des points des cartes
-        des autres joueurs
-        """
         points = 0
         for carte in main_adversaire:
             if isinstance(carte.valeur, int):
