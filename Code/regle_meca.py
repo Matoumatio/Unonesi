@@ -12,11 +12,7 @@
 #et qu'on pioche on ne peut pas rejouer) 
 #
 class MoteurJeu:
-    """
-    Classe qui gère TOUTES les mécaniques et règles du UNO
-    Vérifie si les actions sont autorisées selon les règles officielles
-    """
-    
+       
     def __init__(self):
         self.carte_visible = None           # Dernière carte jouée (ex: 7 jaune)
         self.couleur_actuelle = None        # Couleur en cours (rouge, jaune, vert, bleu)
