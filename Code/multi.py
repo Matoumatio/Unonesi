@@ -1,5 +1,5 @@
 # Coder toutes les classes\methodes liées au multijoueurs
-import Gestion_Cartes.py as Gestion_Cartes
+import Gestion_Cartes as Gestion_Cartes
 from Gestion_Cartes import Carte, JeuDeCartes
 
 import random
@@ -43,6 +43,9 @@ class JeuDeCartes:
         return cartes_piochees
 
 """
+
+
+
 class Joueur:
     def __init__(self, nom):
         self.nom = nom
@@ -72,21 +75,48 @@ class Game:
 
 
         
-            
-
     def tour_suivant(self):
-        if self.joueur_actuel == 3:
+        if self.joueur_actuel == len(self.liste_joueurs):
             self.joueur_actuel = 0
         else:
-            self.joueur_actuel + 1
+            self.joueur_actuel =+ 1
 
     def inverser_sens(self):
-        self.sens_du_jeu
+        self.sens_du_jeu = 1 if self.sens_du_jeu == -1 else -1
 
     def sauter_joueur(self):
-        self.joueur_actuel + 1
+        self.tour_suivant(self)
+        self.tour_suivant(self)
 
     def obtenir_joueur_actuel(self):
-        joueur_actuel = self.joueur_actuel
-        return joueur_actuel
+        return self.liste_joueurs[self.joueur_actuel]
 
+
+# TEST
+if __name__ == "__main__":
+    # Créer des joueurs
+    joueur1 = Joueur("Alice")
+    joueur2 = Joueur("Bob")
+    joueur3 = Joueur("Charlie")
+    
+    # Créer une partie
+    partie = Game([joueur1, joueur2, joueur3])
+    
+    # Créer un paquet et commencer
+    paquet = JeuDeCartes()
+    partie.commencer_partie(paquet)
+    
+    # Vérifier que chaque joueur a 7 cartes
+    print(f"{joueur1.nom} a {len(joueur1.cartes)} cartes")
+    print(f"{joueur2.nom} a {len(joueur2.cartes)} cartes")
+    print(f"{joueur3.nom} a {len(joueur3.cartes)} cartes")
+    
+    # Tester le tour suivant
+    print(f"\nJoueur actuel : {partie.obtenir_joueur_actuel().nom}")
+    partie.tour_suivant()
+    print(f"Après tour_suivant : {partie.obtenir_joueur_actuel().nom}")
+    
+    # Tester l'inversion
+    partie.inverser_sens()
+    partie.tour_suivant()
+    print(f"Après inversion et tour : {partie.obtenir_joueur_actuel().nom}")
