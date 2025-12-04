@@ -94,6 +94,5 @@
       *DÉBUT DE PARTIE : Que se passe-t-il selon la première carte ?
       *RÈGLE UNO : Annonce obligatoire
       *FIN DE PARTIE : Détecter le gagnant et compter les points
-      *DÉFI DU +4 (BONUS - règle avancée)
-        
+      (*DÉFI DU +4 (BONUS - règle avancée))
 ---

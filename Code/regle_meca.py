@@ -41,15 +41,15 @@ class MoteurJeu:
         - 5 rouge sur 7 jaune : NON
         - Joker sur n'importe quoi : OUI
         """
-        # Les jokers peuvent TOUJOURS être joués
+        # Les jokers peuvent TOUJOURS être joués peut importe la carte d'avant
         if carte_a_jouer.valeur in ['joker', '+4']:
             return True
         
-        # Même couleur (ex: n'importe quel jaune sur un 7 jaune)
+        # Même couleur (ex: n'importe quel jaune sur un 2 jaune)
         if carte_a_jouer.couleur == self.couleur_actuelle:
             return True
         
-        # Même valeur (ex: 7 jaune sur 7 rouge)
+        # Même valeur (ex: 8 jaune sur 8 rouge)
         if carte_a_jouer.valeur == self.carte_visible.valeur:
             return True
         
@@ -84,16 +84,10 @@ class MoteurJeu:
         2. Met à jour la carte visible et la couleur actuelle
         3. Retourne True si succès, False si interdit
         """
-        # Vérifier si la carte est autorisée
+        # Vérifier si la carte est autorisée a etre posé
         if not self.carte_est_jouable(carte_jouee):
             return False, "Carte non compatible !"
-        
-        # Si c'est un +4, vérifier la légalité (juste info, pas bloquant)
-        if carte_jouee.valeur == '+4':
-            if not self.carte_plus4_est_legale(main_joueur):
-                # Info : le joueur triche mais on laisse passer (le défi viendra plus tard)
-                pass
-        
+       
         # Mettre à jour la carte visible
         self.carte_visible = carte_jouee
         
@@ -164,8 +158,7 @@ class MoteurJeu:
         """
         Calcule qui est le joueur suivant selon le sens du jeu
         
-        Sens horaire : 0 → 1 → 2 → 3 → 0
-        Sens anti-horaire : 0 → 3 → 2 → 1 → 0
+        Sens horaire ou Sens anti-horaire 
         """
         if self.sens_horaire:
             self.joueur_actuel_index = (self.joueur_actuel_index + 1) % nombre_joueurs
@@ -196,13 +189,7 @@ class MoteurJeu:
           → Sinon : il passe son tour
         
         - Si pioche de SANCTION (+2, +4) :
-          → Le joueur pioche et PASSE son tour (pas de rejeu)
-        
-        Exemples :
-        - Carte visible = 7 jaune, joueur pioche volontairement un 7 rouge : 
-          il PEUT jouer le 7 rouge direct
-        - Joueur se prend un +2, pioche 2 cartes : 
-          il PASSE son tour même si les cartes sont jouables
+          → Le joueur pioche et PASSE son tour (pas le droit de rejouer après avoir piocher)
         """
         # Si c'est une sanction : JAMAIS de rejeu
         if est_sanction:
