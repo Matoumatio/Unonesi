@@ -1,8 +1,16 @@
 [
     {
     "card" : [
-        {
+         {
             "card_001" : {
+                "card.type" : "basic",
+                "card.color" : "r",
+                "card.value" : "0",
+                "card.sprite" : "Assets/Cards/R0.png"
+            }
+         },
+        {
+            "card_002" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "1",
@@ -10,7 +18,7 @@
             }
         },
         {
-            "card_002" : {
+            "card_003" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "2",
@@ -18,7 +26,7 @@
             }
         },
         {
-            "card_003" :{
+            "card_004" :{
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "3",
@@ -26,7 +34,7 @@
             }
         },
         {
-            "card_004" : {
+            "card_005" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "4",
@@ -34,7 +42,7 @@
             }
         },
         {
-            "card_005" : {
+            "card_006" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "5",
@@ -42,7 +50,7 @@
             }
         },
         {
-            "card_006" : {
+            "card_007" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "6",
@@ -50,7 +58,7 @@
             }
         },
         {
-            "card_007" : {
+            "card_008" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "7",
@@ -58,23 +66,31 @@
             }
         },
         {
-            "card_008" : {
+            "card_009" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "8",
                 "card.sprite" : "Assets/Cards/R8.png"
             }
         },
-        {
-            "card_009" : {
+         {
+            "card_0010" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "9",
                 "card.sprite" : "Assets/Cards/R9.png"
             }
         },
+         {
+            "card_011" : {
+                "card.type" : "basic",
+                "card.color" : "b",
+                "card.value" : "0",
+                "card.sprite" : "Assets/Cards/B0.png"
+            }
+        },
         {
-            "card_010" : {
+            "card_012" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "1",
@@ -82,7 +98,7 @@
             }
         },
         {
-            "card_011" : {
+            "card_013" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "2",
@@ -90,7 +106,7 @@
             }
         },
         {
-            "card_012" : {
+            "card_014" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "3",
@@ -98,7 +114,7 @@
             }
         },
         {
-            "card_013" : {
+            "card_015" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "4",
@@ -106,7 +122,7 @@
             }
         },
         {
-            "card_014" : {
+            "card_016" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "5",
@@ -114,7 +130,7 @@
             }
         },
         {
-            "card_015" : {
+            "card_017" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "6",
@@ -122,7 +138,7 @@
             }
         },
         {
-            "card_016" : {
+            "card_018" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "7",
@@ -130,23 +146,31 @@
             }
         },
         {
-            "card_017" : {
+            "card_019" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "8",
                 "card.sprite" : "Assets/Cards/B8.png"
             }
         },
-        {
-            "card_018" : {
+         {
+            "card_020" : {
                 "card.type" : "basic",
                 "card.color" : "b",
                 "card.value" : "9",
                 "card.sprite" : "Assets/Cards/B9.png"
             }
         },
+          {
+            "card_021" : {
+                "card.type" : "basic",
+                "card.color" : "j",
+                "card.value" : "0",
+                "card.sprite" : "Assets/Cards/J0.png"
+            }
+        },
         {
-            "card_019" : {
+            "card_022" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "1",
@@ -154,7 +178,7 @@
             }
         },
         {
-            "card_020" : {
+            "card_023" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "2",
@@ -162,7 +186,7 @@
             }
         },
         {
-            "card_021" : {
+            "card_024" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "3",
@@ -170,7 +194,7 @@
             }
         },
         {
-            "card_022" : {
+            "card_025" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "4",
@@ -178,7 +202,7 @@
             }
         },
         {
-            "card_023" : {
+            "card_026" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "5",
@@ -186,7 +210,7 @@
             }
         },
         {
-            "card_024" : {
+            "card_027" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "6",
@@ -194,7 +218,7 @@
             }
         },
         {
-            "card_025" : {
+            "card_038" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "7",
@@ -202,7 +226,7 @@
             }
         },
         {
-            "card_026" : {
+            "card_029" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "8",
@@ -210,7 +234,7 @@
             }
         },
         {
-            "card_027" : {
+            "card_030" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "9",
@@ -218,7 +242,15 @@
             }
         },
         {
-            "card_028" : {
+            "card_031" : {
+                "card.type" : "basic",
+                "card.color" : "v",
+                "card.value" : "0",
+                "card.sprite" : "Assets/Cards/V0.png"
+            }
+        },
+        {
+            "card_032" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "1",
@@ -226,7 +258,7 @@
             }
         },
         {
-            "card_029" : {
+            "card_033" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "2",
@@ -234,7 +266,7 @@
             }
         },
         {
-            "card_030" : {
+            "card_034" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "3",
@@ -242,7 +274,7 @@
             }
         },
         {
-            "card_031" : {
+            "card_035" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "4",
@@ -250,7 +282,7 @@
             }
         },
         {
-            "card_032" : {
+            "card_036" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "5",
@@ -258,7 +290,7 @@
             }
         },
         {
-            "card_033" : {
+            "card_037" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "6",
@@ -266,7 +298,7 @@
             }
         },
         {
-            "card_034" : {
+            "card_038" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "7",
@@ -274,7 +306,7 @@
             }
         },
         {
-            "card_035" : {
+            "card_039" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "8",
@@ -282,14 +314,14 @@
             }
         },
         {
-            "card_036" : {
+            "card_040" : {
                 "card.type" : "basic",
                 "card.color" : "v",
                 "card.value" : "9",
                 "card.sprite" : "Assets/Cards/V9.png"
             }
         },
-        {
+            {
             "card.special_001" : {
                 "card.type" : "joker",
                 "card.color" : "none",
@@ -297,12 +329,48 @@
             }
         },
         {
-            "card.special" : {
+            "card.special_002" : {
                 "card.type" : "inverse",
                 "card.color" : "multi",
                 "card.sprite" : "Assets/Cards/INVERSE.png"
             }
-        }
+        },
+         
+        {
+            "card.special_003" : {
+                "card.type" : "passer",
+                "card.color" : "multi",
+                "card.sprite" : "Assets/Cards/PASSER.png"
+            }
+        },
+         {
+            "card.special_004" : {
+                "card.type" : "+2",
+                "card.color" : "multi",
+                "card.sprite" : "Assets/Cards/+2.png"
+            }
+        },
+         {
+            "card.special_005" : {
+                "card.type" : "+4",
+                "card.color" : "none",
+                "card.sprite" : "Assets/Cards/+4.png"
+            }
+         },
+          {
+            "card.special_006" : {
+                "card.type" : "changement",
+                "card.color" : "multi",
+                "card.sprite" : "Assets/Cards/CHANGEMENT.png"
+            }
+         },
+         {
+            "card.special_007" : {
+                "card.type" : "changement_couleur",
+                "card.color" : "multi",
+                "card.sprite" : "Assets/Cards/CHANGEMENT_COULEUR.png"
+            }
+         }
     ]
     }
 ]
