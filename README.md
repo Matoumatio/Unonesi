@@ -85,7 +85,7 @@
     - Mathis : Ajout de constants.json pour syncroniser les valeurs (sauvegardes, paramètres, ...) entre les fichiers
     ![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon5.png)
     - Shirley : Travail sur card.json pour definir les différentes cartes disponibles
-- 04/122025
+- 04/12/2025
     -Tom : Finalisation du code avec la mise en place de:
       *RÈGLE PRINCIPALE : Est-ce que je peux poser cette carte ?
       *ACTIONS DE JEU : Que se passe-t-il quand on joue une carte ?
@@ -95,4 +95,6 @@
       *RÈGLE UNO : Annonce obligatoire
       *FIN DE PARTIE : Détecter le gagnant et compter les points
       (*DÉFI DU +4 (BONUS - règle avancée))
+    - Mathis : Travail sur le sprite des cartes
+    ![Sprite des cartes](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon6.png)
 ---
