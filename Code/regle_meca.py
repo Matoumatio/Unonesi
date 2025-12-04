@@ -285,8 +285,8 @@ class MoteurJeu:
         """
         RÈGLE COMPTAGE DES POINTS :
         - Cartes 0-9 : valeur du chiffre
-        - +2, Inverse, Passe : 20 points
-        - Joker, +4 : 50 points
+        - +2, Inverse et Passe : 20 points
+        - Jokeret +4 : 50 points
         
         Le gagnant marque la somme des points des cartes
         des autres joueurs
