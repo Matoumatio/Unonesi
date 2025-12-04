@@ -10,7 +10,7 @@
 #voir regle site (toutes sauf les trois dernieres) regles classique 
 # (regle : si on pioche une bonne carte, on peut rejouer direct, si on se prend une sanction
 #et qu'on pioche on ne peut pas rejouer) 
-
+#
 class MoteurJeu:
     """
     Classe qui gère TOUTES les mécaniques et règles du UNO
