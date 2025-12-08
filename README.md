@@ -98,6 +98,12 @@
     - Mathis : Travail sur le sprite des cartes
     ![Sprite des cartes](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon6.png)
 - 08/12/2025
-    - Mathis : Ajout des cartes chiffres + carte placeholder
+    - Mathis
+        - Ajout des cartes chiffres + carte placeholder
+        - Ajout de card-test.py et card-random.py pour tester Arcade et vérifier que les fichiers marchent ensembles
+            - card-test.py --> Teste l'ensemble des cartes et affiche si des problèmes sont survenus
+            - card-random.py --> Affiche une carte aléatoire, appuyez sur "R" pour une nouvelle carte
+        - Modification des ID dans card.json car problèmes
+        - [A FAIRE] : Modifier les incohérences entre les sprites (pixel en trop, nombres mal placés, ...)
 
 ---
