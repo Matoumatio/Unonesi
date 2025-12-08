@@ -71,19 +71,19 @@
 - 06/11/2025 : Répartitions des rôles et idées principales du projet, préparation des sprites, mise en commun des règles du jeu
 - 12/11/2025 : Avancement individuel dans le projet suite aux répartitions des différentes tâches, Mathis sur l'interface, Nathan sur le système de multijoueur, Shirley sur la gestion des différentes cartes dans le jeu et Tom sur le fonctionnement du jeu et l'implémentation des règles du jeu 
     - Mathis : Recherche sur la bibliothèque Pygame, brouillon de l'interface et recherche des assets
-![Brouillon de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon1.png)
+![Brouillon de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon1.png)
     - Tom : Recherche sur les différentes classes à implémenter pour les mécaniques du jeu : class Carte et MoteurJeu 
 - 19/11/2025
     - Mathis : Recherches sur Aseprite (https://www.aseprite.org/) et Arcade (https://api.arcade.academy/) pour la création des sprites et l'interface graphique, création de brouillons plus détaillés de l'interface de jeu et du menu de pause
-![Brouillon détaillé de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon2.png)
-![Brouillon détaillé du menu de pause](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon3.png)
-![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon4.png)
+![Brouillon détaillé de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon2.png)
+![Brouillon détaillé du menu de pause](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon3.png)
+![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon4.png)
     - Tom : Avancement sur les mêmes classes 
 - 27/11/2025
     - Tom : Correction de bug sur les classes et sur l'ensemble du code et essaie du code déjà en place avec des asserts
     - Nathan : Essaie d'import les classes cartes dans le fichier multi. Avancement des methodes de la class Game
     - Mathis : Ajout de constants.json pour syncroniser les valeurs (sauvegardes, paramètres, ...) entre les fichiers
-    ![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon5.png)
+    ![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon5.png)
     - Shirley : Travail sur card.json pour definir les différentes cartes disponibles
 - 04/12/2025
     - Tom : Finalisation du code avec la mise en place de:
@@ -96,7 +96,7 @@
         - *FIN DE PARTIE : Détecter le gagnant et compter les points
         - (*DÉFI DU +4 (BONUS - règle avancée))
     - Mathis : Travail sur le sprite des cartes
-    ![Sprite des cartes](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon6.png)
+    ![Sprite des cartes](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon6.png)
 - 08/12/2025
     - Mathis : Ajout des cartes chiffres + carte placeholder
 
