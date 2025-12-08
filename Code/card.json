@@ -74,7 +74,7 @@
             }
         },
          {
-            "card_0010" : {
+            "card_010" : {
                 "card.type" : "basic",
                 "card.color" : "r",
                 "card.value" : "9",
@@ -218,7 +218,7 @@
             }
         },
         {
-            "card_038" : {
+            "card_028" : {
                 "card.type" : "basic",
                 "card.color" : "j",
                 "card.value" : "7",
