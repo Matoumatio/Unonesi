@@ -97,4 +97,7 @@
         - (*DÉFI DU +4 (BONUS - règle avancée))
     - Mathis : Travail sur le sprite des cartes
     ![Sprite des cartes](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/Brouillon6.png)
+- 08/12/2025
+    - Mathis : Ajout des cartes chiffres + carte placeholder
+
 ---
