@@ -1,48 +1,7 @@
 # Coder toutes les classes\methodes liées au multijoueurs
 import Gestion_Cartes as Gestion_Cartes
 from Gestion_Cartes import Carte, JeuDeCartes
-
-import random
-"""
-class Carte:
-    def __init__(self, couleur, valeur):
-        self.couleur = couleur   # 'rouge', 'jaune', 'vert', 'bleu' ou 'noir' (joker)
-        self.valeur = valeur     # 0-9, 'inverse', 'passe', '+2', 'joker', '+4'
-
-    def __repr__(self):
-        return f"{self.couleur} {self.valeur}"
-"""
-"""
-class JeuDeCartes:
-    def __init__(self):
-        self.cartes = self.creer_jeu()
-
-    def creer_jeu(self):
-        couleurs = ['rouge', 'jaune', 'vert', 'bleu']
-        valeurs = list(range(10)) + ['inverse', 'passe', '+2']
-        jeu = []
-
-        # Cartes de couleur
-        for couleur in couleurs:
-            for valeur in valeurs:
-                jeu.append(Carte(couleur, valeur))
-                if valeur != 0:
-                    jeu.append(Carte(couleur, valeur))  # deux exemplaires sauf 0
-
-        # Jokers
-        for _ in range(4):
-            jeu.append(Gestion_Cartes(Carte('noir', 'joker')))
-            jeu.append(Carte('noir', '+4'))
-
-        random.shuffle(jeu)
-        return jeu
-
-    def piocher(self, n=1):
-        cartes_piochees = self.cartes[:n]
-        self.cartes = self.cartes[n:]
-        return cartes_piochees
-
-"""
+from regle_meca import MoteurJeu
 
 
 
@@ -59,64 +18,97 @@ class Joueur:
         self.cartes.pop(index)
         return carte_jouee
         
+class Bot:
+    pass
 
 
 class Game:
     def __init__(self, liste_joueurs):
         self.liste_joueurs = liste_joueurs
-        self.joueur_actuel = 0
-        self.sens_du_jeu = 1
+        self.moteur = MoteurJeu()
+        self.paquet = None
+        self.defausse = []
+
 
     def commencer_partie(self, paquet):
+
+        self.paquet = paquet
+
         for joueurs in self.liste_joueurs:
             carte_piochees = paquet.piocher(7)
             for carte in carte_piochees:
                 joueurs.piocher_carte(carte)
 
+        premiere_carte = paquet.piocher(1)[0]
+        self.defausse.append(premiere_carte)
 
-        
+    def obtenir_joueur_actuel(self):
+        return self.liste_joueurs[self.moteur.joueur_actuel_index]
+
+
     def tour_suivant(self):
-        if self.joueur_actuel == len(self.liste_joueurs):
-            self.joueur_actuel = 0
-        else:
-            self.joueur_actuel =+ 1
+        self.moteur.joueur_suivant(len(self.liste_joueurs))
 
     def inverser_sens(self):
-        self.sens_du_jeu = 1 if self.sens_du_jeu == -1 else -1
+        self.moteur.sens_horaire = not self.moteur.sens_horaire
 
     def sauter_joueur(self):
-        self.tour_suivant(self)
-        self.tour_suivant(self)
+        self.tour_suivant()
+        self.tour_suivant()
 
     def obtenir_joueur_actuel(self):
         return self.liste_joueurs[self.joueur_actuel]
 
+    def jouer_tour(self, index_carte):
 
-# TEST
-if __name__ == "__main__":
-    # Créer des joueurs
-    joueur1 = Joueur("Alice")
-    joueur2 = Joueur("Bob")
-    joueur3 = Joueur("Charlie")
+        # 1)
+        joueur = self.obtenir_joueur_actuel()
+        carte_a_jouer = joueur.cartes[index_carte]
+
+        # 2)
+        carte_visible = self.defausse[-1] if self.defausse else None
+
+        # 3) 
+        if not self.moteur.carte_est_jouable(carte_a_jouer):
+            return False, "Cette carte n'est pas jouable"
+        
+        # 4)
+        carte_jouee = joueur.jouer_carte(index_carte)
+        self.defausse.append(carte_jouee)
+
+        #5)
+        succes, message = self.moteur.jouer_carte(carte_jouee, joueur.cartes)
+
+        if not succes:
+            return False, message
+        
+        # 6)
+        effets = self.moteur.appliquer_effet_carte(carte_jouee, len(self.liste_joueurs))
+
+        # 7)
+        self._appliquer_effets(effets)
+
+        # 8)
+        if not effets['sauter_tour']:
+            self.tour_suivant()
+        else:
+            self.sauter_joueur()
+
+        return True, "Carte jouée"
     
-    # Créer une partie
-    partie = Game([joueur1, joueur2, joueur3])
+    def appliquer_effets(self, effets):
+
+        if effets['piocher'] > 0:
+            if effets['qui_pioche'] == "joueur_suivant":
+                index_suivant = self.moteur.joueur_suivant(len(self.liste_joueurs))
+                joueur_suivant = self.liste_joueurs[index_suivant]
+
+                for _ in range(effets['piocher']):
+                  if len(self.paquet.cartes) > 0:
+                    carte = self.paquet.piocher(1)[0]
+                    joueur_suivant.piocher_carte(carte)
+
+
+
     
-    # Créer un paquet et commencer
-    paquet = JeuDeCartes()
-    partie.commencer_partie(paquet)
-    
-    # Vérifier que chaque joueur a 7 cartes
-    print(f"{joueur1.nom} a {len(joueur1.cartes)} cartes")
-    print(f"{joueur2.nom} a {len(joueur2.cartes)} cartes")
-    print(f"{joueur3.nom} a {len(joueur3.cartes)} cartes")
-    
-    # Tester le tour suivant
-    print(f"\nJoueur actuel : {partie.obtenir_joueur_actuel().nom}")
-    partie.tour_suivant()
-    print(f"Après tour_suivant : {partie.obtenir_joueur_actuel().nom}")
-    
-    # Tester l'inversion
-    partie.inverser_sens()
-    partie.tour_suivant()
-    print(f"Après inversion et tour : {partie.obtenir_joueur_actuel().nom}")
+
