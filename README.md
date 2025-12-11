@@ -112,3 +112,4 @@
     - Tom
        -Finalité de la partie du code avec les derniers attributs et ajout de commentaire compréhensible et permettant de se repérer dans le code
 ---
+ 
