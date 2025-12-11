@@ -19,9 +19,8 @@ class MoteurJeu:
         self.sens_horaire = True            # Sens du jeu
         self.joueur_actuel_index = 0        # Index du joueur dont c'est le tour
     
-    # ========================================================================
+   
     # RÈGLE PRINCIPALE : Est-ce que je peux poser cette carte ?
-    # ========================================================================
     
     def carte_est_jouable(self, carte_a_jouer):
 
@@ -47,10 +46,9 @@ class MoteurJeu:
                 return False  # Il a une carte de la bonne couleur = triche !
         return True  # Aucune carte de la couleur = OK
     
-    # ========================================================================
+   
     # ACTIONS DE JEU : Que se passe-t-il quand on joue une carte ?
-    # ========================================================================
-    
+
     def jouer_carte(self, carte_jouee, main_joueur, couleur_choisie=None):
         
         # Vérifier si la carte est autorisée a etre posé
@@ -109,9 +107,7 @@ class MoteurJeu:
         
         return effet
     
-    # ========================================================================
-    # GESTION DES TOURS : Qui joue après ?
-    # ========================================================================
+    # GESTION DES TOURS : Qui joue après? à qui le tour ?
     
     def joueur_suivant(self, nombre_joueurs):
         
@@ -129,9 +125,7 @@ class MoteurJeu:
         self.joueur_suivant(nombre_joueurs)
         return self.joueur_actuel_index
     
-    # ========================================================================
     #  RÈGLE DE LA PIOCHE : Quand et comment piocher ?
-    # ========================================================================
     
     def peut_rejouer_carte_piochee(self, carte_piochee, est_sanction):
         
@@ -142,9 +136,7 @@ class MoteurJeu:
         # Si pioche volontaire : on peut rejouer si la carte est compatible
         return self.carte_est_jouable(carte_piochee)
     
-    # ========================================================================
-    # DÉBUT DE PARTIE : Que se passe-t-il selon la première carte ?
-    # ========================================================================
+    # DÉBUT DE PARTIE : Que se passe-t-il selon la première carte ? (le joueur suivant s'adapte au joueur d'avant)
     
     def gerer_premiere_carte(self, premiere_carte, nombre_joueurs, donneur_index):
         
@@ -186,9 +178,7 @@ class MoteurJeu:
             premier_joueur = (donneur_index + 1) % nombre_joueurs
             return premier_joueur, None
     
-    # ========================================================================
     # RÈGLE UNO : Annonce obligatoire
-    # ========================================================================
     
     def verifier_uno(self, joueur_cartes_restantes, a_dit_uno):
         
@@ -196,9 +186,7 @@ class MoteurJeu:
             return 2  # Pénalité : 2 cartes
         return 0  # Pas de pénalité
     
-    # ========================================================================
-    # FIN DE PARTIE : Détecter le gagnant et compter les points
-    # ========================================================================
+    # FIN DE PARTIE : Qui gagne la partie, on compte les points
     
     def partie_terminee(self, joueur_cartes_restantes):
        
