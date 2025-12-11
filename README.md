@@ -105,5 +105,10 @@
             - card-random.py --> Affiche une carte aléatoire, appuyez sur "R" pour une nouvelle carte
         - Modification des ID dans card.json car problèmes
         - [A FAIRE] : Modifier les incohérences entre les sprites (pixel en trop, nombres mal placés, ...)
+    - Tom
+       -avancement du projet(fin) + correction de bug 
 
+- 11/12/2025
+    - Tom
+       -Finalité de la partie du code avec les derniers attributs et ajout de commentaire compréhensible et permettant de se repérer dans le code
 ---
