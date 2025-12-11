@@ -173,7 +173,7 @@ class MoteurJeu:
             return 2  # Pénalité : 2 cartes
         return 0  # Pas de pénalité
     
-    # FIN DE PARTIE : Qui gagne la partie, on compte les points
+    # FIN DE PARTIE : Qui gagne la partie, on compte les points des cartes en main des différents joueurs
     
     def partie_terminee(self, joueur_cartes_restantes):
        
