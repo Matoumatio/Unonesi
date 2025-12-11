@@ -111,5 +111,10 @@
 - 11/12/2025
     - Tom
        -Finalité de la partie du code avec les derniers attributs et ajout de commentaire compréhensible et permettant de se repérer dans le code
+    
+    - Nathan
+         - Avancement sur les methodes 
+         - lien avec le multi et le code de Tom
+         
 ---
  
