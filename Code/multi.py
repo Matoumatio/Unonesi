@@ -60,35 +60,36 @@ class Game:
         return self.liste_joueurs[self.joueur_actuel]
 
     def jouer_tour(self, index_carte):
-
-        # 1)
+        """ Gere un tour entier """
+        
+        # Récupere le joueur actuel et la carte à jouer
         joueur = self.obtenir_joueur_actuel()
         carte_a_jouer = joueur.cartes[index_carte]
 
-        # 2)
+        # Récupere la carte visible
         carte_visible = self.defausse[-1] if self.defausse else None
 
-        # 3) 
+        # Vérifie si la carte est jouable
         if not self.moteur.carte_est_jouable(carte_a_jouer):
             return False, "Cette carte n'est pas jouable"
         
-        # 4)
+        # Joue la carte
         carte_jouee = joueur.jouer_carte(index_carte)
         self.defausse.append(carte_jouee)
 
-        #5)
+        # Met a jour
         succes, message = self.moteur.jouer_carte(carte_jouee, joueur.cartes)
 
         if not succes:
             return False, message
         
-        # 6)
+        # Applique les effets de la carte
         effets = self.moteur.appliquer_effet_carte(carte_jouee, len(self.liste_joueurs))
 
-        # 7)
+        # Gere les effets
         self._appliquer_effets(effets)
 
-        # 8)
+        # Passe au joueur suivant
         if not effets['sauter_tour']:
             self.tour_suivant()
         else:
@@ -97,12 +98,15 @@ class Game:
         return True, "Carte jouée"
     
     def appliquer_effets(self, effets):
-
+        
+        # Si quelqu'un doit piocher
         if effets['piocher'] > 0:
             if effets['qui_pioche'] == "joueur_suivant":
+                # Calculer qui est le joueur suivant
                 index_suivant = self.moteur.joueur_suivant(len(self.liste_joueurs))
                 joueur_suivant = self.liste_joueurs[index_suivant]
-
+                
+                # Faire piocher
                 for _ in range(effets['piocher']):
                   if len(self.paquet.cartes) > 0:
                     carte = self.paquet.piocher(1)[0]
