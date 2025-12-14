@@ -1,8 +1,7 @@
 # Coder toutes les classes\methodes liées au multijoueurs
-import Gestion_Cartes as Gestion_Cartes
+import random
 from Gestion_Cartes import Carte, JeuDeCartes
 from regle_meca import MoteurJeu
-
 
 
 class Joueur:
@@ -18,8 +17,7 @@ class Joueur:
         self.cartes.pop(index)
         return carte_jouee
         
-class Bot:
-    pass
+
 
 
 class Game:
@@ -34,13 +32,18 @@ class Game:
 
         self.paquet = paquet
 
+        # Distribue 7 cartes à chaque joueur
         for joueurs in self.liste_joueurs:
             carte_piochees = paquet.piocher(7)
             for carte in carte_piochees:
                 joueurs.piocher_carte(carte)
 
+        # Retourne la première carte de la fausse
         premiere_carte = paquet.piocher(1)[0]
         self.defausse.append(premiere_carte)
+
+        self.moteur.carte_visible = premiere_carte
+        self.moteur.couleur_actuelle = premiere_carte.couleur
 
     def obtenir_joueur_actuel(self):
         return self.liste_joueurs[self.moteur.joueur_actuel_index]
@@ -56,10 +59,8 @@ class Game:
         self.tour_suivant()
         self.tour_suivant()
 
-    def obtenir_joueur_actuel(self):
-        return self.liste_joueurs[self.joueur_actuel]
 
-    def jouer_tour(self, index_carte):
+    def jouer_tour(self, index_carte, couleur_choisie=None):
         """ Gere un tour entier """
         
         # Récupere le joueur actuel et la carte à jouer
@@ -97,7 +98,7 @@ class Game:
 
         return True, "Carte jouée"
     
-    def appliquer_effets(self, effets):
+    def _appliquer_effets(self, effets):
         
         # Si quelqu'un doit piocher
         if effets['piocher'] > 0:
@@ -112,7 +113,67 @@ class Game:
                     carte = self.paquet.piocher(1)[0]
                     joueur_suivant.piocher_carte(carte)
 
+    def obtenir_cartes_jouables(self, joueur):
+        """ Retourne une liste des index des cartes jouables pour un joueur"""
+        cartes_jouables = []
 
+        for i, carte in enumerate(joueur.cartes):
+            if self.moteur.carte_est_jouable(carte):
+                cartes_jouables.append(i)
 
+        return cartes_jouables
     
+    def piocher_carte_obligatoire(self):
+        """ Le joueur doit piocher car il ne peut pas jouer"""
+        joueur = self.obtenir_joueur_actuel()
 
+
+        if len(self.paquet.cartes) > 0:
+            carte = self.paquet.piocher(1)[0]
+            joueur.piocher_carte(carte)
+
+            # Verifie si la carte joué est jouable
+            if self.moteur.peut_rejouer_carte_piochee(carte, est_sanction=False):
+                return True, carte  # Le joueur joue la carte
+            else:
+                self.tour_suivant()
+                return False, carte # Le joueur passe son tour
+            
+        return False, None  # Paquet Vide
+    
+    def verifier_fin_partie(self):
+        """Vérifie si un joueur a gagné"""
+        for joueur in self.liste_joueurs:
+            if len(joueur.cartes) == 0:
+                return True, joueur
+        
+        return False, None
+    
+    def choisir_couleur_joker(self, couleur):
+        """Le joueur choisit une couleur après avoir joué un joker"""
+        if couleur in ["rouge", "jaune", "bleu", "vert"]:
+            self.moteur.couleur_actuelle = couleur
+            return True
+        return False
+    
+    def calculer_scores(self, gagnant):
+        """Calcule le score du gagnant"""
+        score_total = 0
+        for joueur in self.liste_joueurs:
+            if joueur != gagnant:
+                score_total += self.moteur.calculer_points(joueur.cartes)
+        return score_total
+    
+    def choisir_couleur_automatique(self, joueur):
+        """Choisit automatiquement la couleur la plus présente dans la main du bot joueur"""
+        # Compter les couleurs dans la main
+        compteur_couleurs = {'rouge': 0, 'jaune': 0, 'vert': 0, 'bleu': 0}
+        
+        for carte in joueur.cartes:
+            if carte.couleur in compteur_couleurs:
+                compteur_couleurs[carte.couleur] += 1
+        
+        # Trouver la couleur la plus fréquente
+        couleur_max = max(compteur_couleurs, key=compteur_couleurs.get)
+        
+        return couleur_max
