@@ -116,5 +116,20 @@
          - Avancement sur les methodes 
          - lien avec le multi et le code de Tom
          
+
+- 13/12/2025  et  14/12/2025
+    - Nathan
+        - Finalisation du multijoueur local
+        - Intégration avec le `MoteurJeu` de Tom
+        - Implémentation des fonctionnalités :
+            - Détection des cartes jouables pour chaque joueur
+            - Gestion des tours 
+            - Gestion du sens du jeu 
+            - Application des effets des cartes spéciales (+2, +4, passe, inverse)
+            - Système de pioche obligatoire avec règle de rejeu
+            - Gestion des jokers avec choix automatique de couleur
+            - Vérification de fin de partie et calcul des scores
+        - Tests validés : simulation de 10 tours avec 3 joueurs
+         
 ---
  
