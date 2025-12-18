@@ -80,14 +80,14 @@
 ![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon4.png)
    - Tom : Avancement sur les mêmes classes 
    - Shirley: commencement de la création des cartes
+
 - 27/11/2025
     - Tom : Correction de bug sur les classes et sur l'ensemble du code et essaie du code déjà en place avec des asserts
     - Nathan : Essaie d'import les classes cartes dans le fichier multi. Avancement des methodes de la class Game
     - Mathis : Ajout de constants.json pour syncroniser les valeurs (sauvegardes, paramètres, ...) entre les fichiers
     ![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon5.png)
     - Shirley : Travail sur card.json pour definir les différentes cartes disponibles
-<<<<<<< HEAD
-- 04/122025
+- 04/12/2025
     -Tom : Finalisation du code avec la mise en place de:
       *RÈGLE PRINCIPALE : Est-ce que je peux poser cette carte ?
       *ACTIONS DE JEU : Que se passe-t-il quand on joue une carte ?
@@ -122,8 +122,7 @@
         - [A FAIRE] : Modifier les incohérences entre les sprites (pixel en trop, nombres mal placés, ...)
     - Shirley: relecture de card.json et concertation avec mes camarades pours savoir si ils ont besoin que je rajoute qlq chose
     - Tom
-       - avancement du projet(fin) + correction de bug 
-
+       - avancement du projet(fin) + correction de bug
 - 11/12/2025
     - Tom
        -Finalité de la partie du code avec les derniers attributs et ajout de commentaire compréhensible et permettant de se repérer dans le code
@@ -136,7 +135,7 @@
         - Travail sur les sprites (encore (bruh comme si ça allais changer))
     - shirley: demande a mes collègues si ils ont besoin d'aide
 
-- 13/12/2025  et  14/12/2025
+- 13/12/2025 et 14/12/2025
     - Nathan
         - Finalisation du multijoueur local
         - Intégration avec le `MoteurJeu` de Tom
@@ -151,8 +150,7 @@
         - Tests validés : simulation de 10 tours avec 3 joueurs
     - Mathis
         - Premiers tests UI avec Arcade
-    -shirley: relecture de tout les fichiers
-
+    - Shirley: relecture de tout les fichiers
 - 18/12/2025
     - Mathis
         - Continuité des tests UI avec Arcade
