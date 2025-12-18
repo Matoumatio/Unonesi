@@ -96,15 +96,9 @@
       *DÉBUT DE PARTIE : Que se passe-t-il selon la première carte ?
       *RÈGLE UNO : Annonce obligatoire
       *FIN DE PARTIE : Détecter le gagnant et compter les points
-<<<<<<< HEAD
       *DÉFI DU +4 (BONUS - règle avancée)
-    
-    -shirley: finition de la création de toute les cartes.
-     
-=======
-      (*DÉFI DU +4 (BONUS - règle avancée))
->>>>>>> d24654461b2add8504e4f2766d9925db052b8b8d
-=======
+     (*DÉFI DU +4 (BONUS - règle avancée))
+    - Shirley: finition de la création de toute les cartes.
 - 04/12/2025
     - Tom : Finalisation du code avec la mise en place de:
         - *RÈGLE PRINCIPALE : Est-ce que je peux poser cette carte ?
@@ -126,16 +120,10 @@
             - card-random.py --> Affiche une carte aléatoire, appuyez sur "R" pour une nouvelle carte
         - Modification des ID dans card.json car problèmes
         - [A FAIRE] : Modifier les incohérences entre les sprites (pixel en trop, nombres mal placés, ...)
-<<<<<<< HEAD
-    - shirley: relecture de card.json et concertation avec mes camarades pours savoir si ils ont besoin que je rajoute qlq chose
-=======
+    - Shirley: relecture de card.json et concertation avec mes camarades pours savoir si ils ont besoin que je rajoute qlq chose
     - Tom
-       -avancement du projet(fin) + correction de bug 
->>>>>>> 10084fc88411c5beabfafd22b8e53d6b5d99801a
+       - avancement du projet(fin) + correction de bug 
 
-<<<<<<< HEAD
->>>>>>> bc9b35f40ef3d1afda5b6c8a38d1b40a07633af0
-=======
 - 11/12/2025
     - Tom
        -Finalité de la partie du code avec les derniers attributs et ajout de commentaire compréhensible et permettant de se repérer dans le code
@@ -167,5 +155,4 @@
     - Mathis
         - Continuité des tests UI avec Arcade
 
->>>>>>> 10084fc88411c5beabfafd22b8e53d6b5d99801a
 ---
