@@ -78,13 +78,33 @@
 ![Brouillon détaillé de l'interface de jeu](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon2.png)
 ![Brouillon détaillé du menu de pause](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon3.png)
 ![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon4.png)
-    - Tom : Avancement sur les mêmes classes 
+   - Tom : Avancement sur les mêmes classes 
+   - Shirley: commencement de la création des cartes
 - 27/11/2025
     - Tom : Correction de bug sur les classes et sur l'ensemble du code et essaie du code déjà en place avec des asserts
     - Nathan : Essaie d'import les classes cartes dans le fichier multi. Avancement des methodes de la class Game
     - Mathis : Ajout de constants.json pour syncroniser les valeurs (sauvegardes, paramètres, ...) entre les fichiers
     ![Brouillon non détaillé des différentes parties de programmation pour la sélection des cartes et l'IA](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon5.png)
     - Shirley : Travail sur card.json pour definir les différentes cartes disponibles
+<<<<<<< HEAD
+- 04/122025
+    -Tom : Finalisation du code avec la mise en place de:
+      *RÈGLE PRINCIPALE : Est-ce que je peux poser cette carte ?
+      *ACTIONS DE JEU : Que se passe-t-il quand on joue une carte ?
+      *GESTION DES TOURS : Qui joue après ?
+      *RÈGLE DE LA PIOCHE : Quand et comment piocher ?
+      *DÉBUT DE PARTIE : Que se passe-t-il selon la première carte ?
+      *RÈGLE UNO : Annonce obligatoire
+      *FIN DE PARTIE : Détecter le gagnant et compter les points
+<<<<<<< HEAD
+      *DÉFI DU +4 (BONUS - règle avancée)
+    
+    -shirley: finition de la création de toute les cartes.
+     
+=======
+      (*DÉFI DU +4 (BONUS - règle avancée))
+>>>>>>> d24654461b2add8504e4f2766d9925db052b8b8d
+=======
 - 04/12/2025
     - Tom : Finalisation du code avec la mise en place de:
         - *RÈGLE PRINCIPALE : Est-ce que je peux poser cette carte ?
@@ -97,6 +117,7 @@
         - (*DÉFI DU +4 (BONUS - règle avancée))
     - Mathis : Travail sur le sprite des cartes
     ![Sprite des cartes](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon6.png)
+    - shirley: ajout des cartes donc modification de cars.json
 - 08/12/2025
     - Mathis
         - Ajout des cartes chiffres + carte placeholder
@@ -105,9 +126,16 @@
             - card-random.py --> Affiche une carte aléatoire, appuyez sur "R" pour une nouvelle carte
         - Modification des ID dans card.json car problèmes
         - [A FAIRE] : Modifier les incohérences entre les sprites (pixel en trop, nombres mal placés, ...)
+<<<<<<< HEAD
+    - shirley: relecture de card.json et concertation avec mes camarades pours savoir si ils ont besoin que je rajoute qlq chose
+=======
     - Tom
        -avancement du projet(fin) + correction de bug 
+>>>>>>> 10084fc88411c5beabfafd22b8e53d6b5d99801a
 
+<<<<<<< HEAD
+>>>>>>> bc9b35f40ef3d1afda5b6c8a38d1b40a07633af0
+=======
 - 11/12/2025
     - Tom
        -Finalité de la partie du code avec les derniers attributs et ajout de commentaire compréhensible et permettant de se repérer dans le code
@@ -139,4 +167,5 @@
     - Mathis
         - Continuité des tests UI avec Arcade
 
+>>>>>>> 10084fc88411c5beabfafd22b8e53d6b5d99801a
 ---
