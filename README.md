@@ -115,7 +115,9 @@
     - Nathan
          - Avancement sur les methodes 
          - lien avec le multi et le code de Tom
-         
+        
+    - Mathis
+        - Travail sur les sprites (encore (bruh comme si ça allais changer))
 
 - 13/12/2025  et  14/12/2025
     - Nathan
@@ -130,6 +132,11 @@
             - Gestion des jokers avec choix automatique de couleur
             - Vérification de fin de partie et calcul des scores
         - Tests validés : simulation de 10 tours avec 3 joueurs
-         
+    - Mathis
+        - Premiers tests UI avec Arcade
+
+- 18/12/2025
+    - Mathis
+        - Continuité des tests UI avec Arcade
+
 ---
- 
