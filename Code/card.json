@@ -81,7 +81,7 @@
                 "card.sprite" : "Assets/Cards/R9.png"
             }
         },
-         {
+        {
             "card_011" : {
                 "card.type" : "basic",
                 "card.color" : "b",
@@ -153,7 +153,7 @@
                 "card.sprite" : "Assets/Cards/B8.png"
             }
         },
-         {
+        {
             "card_020" : {
                 "card.type" : "basic",
                 "card.color" : "b",
@@ -161,7 +161,7 @@
                 "card.sprite" : "Assets/Cards/B9.png"
             }
         },
-          {
+        {
             "card_021" : {
                 "card.type" : "basic",
                 "card.color" : "j",
@@ -321,7 +321,7 @@
                 "card.sprite" : "Assets/Cards/V9.png"
             }
         },
-            {
+        {
             "card.special_001" : {
                 "card.type" : "joker",
                 "card.color" : "none",
@@ -350,7 +350,7 @@
                 "card.sprite" : "Assets/Cards/+2.png"
             }
         },
-         {
+        {
             "card.special_005" : {
                 "card.type" : "+4",
                 "card.color" : "none",

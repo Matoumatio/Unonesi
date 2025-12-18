@@ -43,4 +43,3 @@ print(jeu.piocher(7))
 assert len(jeu.cartes) == 108 -7 
 assert len(jeu.piocher(3)) == 3
 assert len(jeu.cartes) == 108 - 7 - 3
-
