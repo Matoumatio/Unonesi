@@ -134,6 +134,7 @@
         
     - Mathis
         - Travail sur les sprites (encore (bruh comme si ça allais changer))
+    - shirley: demande a mes collègues si ils ont besoin d'aide
 
 - 13/12/2025  et  14/12/2025
     - Nathan
@@ -150,6 +151,7 @@
         - Tests validés : simulation de 10 tours avec 3 joueurs
     - Mathis
         - Premiers tests UI avec Arcade
+    -shirley: relecture de tout les fichiers
 
 - 18/12/2025
     - Mathis
