@@ -1,4 +1,4 @@
-# exemplePioche.py / Shirley
+# exemplePioche.py / Mathis
 
 import random
 import json

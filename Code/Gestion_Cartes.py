@@ -1,3 +1,5 @@
+# exemplePioche.py / Shirley
+
 import random
 class Carte:
         def __init__(self, couleur, valeur):
