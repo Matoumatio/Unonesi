@@ -1,3 +1,5 @@
+# multi.py / Nathan
+
 # Coder toutes les classes\methodes liées au multijoueurs
 import random
 from Gestion_Cartes import Carte, JeuDeCartes

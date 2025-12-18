@@ -1,3 +1,5 @@
+# regle_meca.py / Tom
+
 class MoteurJeu:
        
     def __init__(self):
