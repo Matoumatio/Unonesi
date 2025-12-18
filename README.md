@@ -156,5 +156,6 @@
 - 18/12/2025
     - Mathis
         - Continuité des tests UI avec Arcade
+    - shirley:  discussion sur la forme de l'oral
 
 ---
