@@ -1,4 +1,4 @@
-# card-test.py / Mathis
+# card-check.py / Mathis
 
 import arcade
 from arcade import Sprite, SpriteList
