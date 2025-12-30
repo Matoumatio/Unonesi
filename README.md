@@ -80,7 +80,6 @@
 ![Brouillon détaillé du menu de paramètres](https://raw.githubusercontent.com/Matoumatio/Unonesi/refs/heads/main/Assets/RM/Brouillon4.png)
    - Tom : Avancement sur les mêmes classes 
    - Shirley: commencement de la création des cartes
-
 - 27/11/2025
     - Tom : Correction de bug sur les classes et sur l'ensemble du code et essaie du code déjà en place avec des asserts
     - Nathan : Essaie d'import les classes cartes dans le fichier multi. Avancement des methodes de la class Game
@@ -126,15 +125,12 @@
 - 11/12/2025
     - Tom
        -Finalité de la partie du code avec les derniers attributs et ajout de commentaire compréhensible et permettant de se repérer dans le code
-    
     - Nathan
          - Avancement sur les methodes 
          - lien avec le multi et le code de Tom
-        
     - Mathis
         - Travail sur les sprites (encore (bruh comme si ça allais changer))
     - shirley: demande a mes collègues si ils ont besoin d'aide
-
 - 13/12/2025 et 14/12/2025
     - Nathan
         - Finalisation du multijoueur local
